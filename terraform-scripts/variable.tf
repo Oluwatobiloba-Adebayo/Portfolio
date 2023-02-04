@@ -18,6 +18,10 @@ variable "DOCKER_REGISTRY_SERVER_PASSWORD" {
   default = "hildred_DOCKERHUB"
 }
 
+variable "SECRET_KEY" {
+  default = "yl=kc_2vo-ag1)putz+qf9(6ry%x%^n(jr=y3jd7k4u9f)f@+s"
+}
+
 variable "DOCKER_IMAGE" {
   default = "DOCKER|hildredadebayo/django-portfolio:v2"
 }
