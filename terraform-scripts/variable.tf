@@ -7,21 +7,28 @@ variable "rg-location" {
 }
 
 variable "DOCKER_REGISTRY_SERVER_URL" {
-  default = "https://hub.docker.com/repository/docker/hildredadebayo/django-portfolio"
+  default = "[URL to the docker repository your image is stored]"
+  sensitive = true
+
 }
 
 variable "DOCKER_REGISTRY_SERVER_USERNAME" {
-  default = "hildredadebayo"
+  default = "[your docker username]"
+  sensitive = true
+
 }
 
 variable "DOCKER_REGISTRY_SERVER_PASSWORD" {
-  default = "hildred_DOCKERHUB"
-}
+  default = "[your docker password]"
+  sensitive = true
 
-variable "SECRET_KEY" {
-  default = "yl=kc_2vo-ag1)putz+qf9(6ry%x%^n(jr=y3jd7k4u9f)f@+s"
 }
 
 variable "DOCKER_IMAGE" {
-  default = "DOCKER|hildredadebayo/django-portfolio:v2"
+  default = "DOCKER|[your docker image name and tag]"
+}
+
+#Pass this variable in the terraform apply command
+variable "SECRET_KEY" {
+  sensitive = true
 }
